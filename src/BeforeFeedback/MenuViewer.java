@@ -114,7 +114,7 @@ public class MenuViewer {
     }
 
     public void displayOrderMenu(){
-        if(order.savedList.size()!=0) {
+        if(!order.savedList.isEmpty()) {
             System.out.println();
             System.out.println();
             System.out.println("아래와 같이 주문 하시겠습니까? \n");

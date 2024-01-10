@@ -14,18 +14,17 @@ public class Item extends Menu{
 
     @Override
     public String toString() {
-        StringBuilder builder = new StringBuilder();
-        builder.append(this.name);
-        builder.append("\t");
-        builder.append(" | ");
-        builder.append("\t");
-        builder.append("W ");
-        builder.append(this.price);
-        builder.append("\t");
-        builder.append(" | ");
-        builder.append("\t");
-        builder.append(this.description);
-        return builder.toString();
+        String builder = this.name +
+                "\t" +
+                " | " +
+                "\t" +
+                "W " +
+                this.price +
+                "\t" +
+                " | " +
+                "\t" +
+                this.description;
+        return builder;
     }
 
     public Item(String name, String description, Double price) {
