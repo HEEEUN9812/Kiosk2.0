@@ -19,11 +19,12 @@ public class Item extends Menu{
         builder.append("\t");
         builder.append(" | ");
         builder.append("\t");
-        builder.append(this.description);
+        builder.append("W ");
+        builder.append(this.price);
         builder.append("\t");
         builder.append(" | ");
         builder.append("\t");
-        builder.append(this.price);
+        builder.append(this.description);
         return builder.toString();
     }
 

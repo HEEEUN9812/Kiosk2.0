@@ -88,28 +88,28 @@ public class MenuViewer {
         }
     }
 
-    public void displaySelectItem(Item menuItem){
+    public void displaySelectItem(Item selectedItem){
         System.out.println();
         System.out.println();
-        System.out.println(menuItem);
+        System.out.println(selectedItem);
         System.out.println("위 메뉴를 장바구니에 추가하시겠습니까?");
         System.out.println("1. 확인 \t \t 2. 취소");
-        handleSelectItemInput(menuItem);
+        handleSelectItemInput(selectedItem);
     }
 
-    public void handleSelectItemInput(Item menuItem){
+    public void handleSelectItemInput(Item selectedItem){
         Scanner sc = new Scanner(System.in);
         int select = sc.nextInt();
         if (select == 1){
-            order.saveList(menuItem);
-            System.out.print(menuItem.name);
+            order.saveList(selectedItem);
+            System.out.print(selectedItem.name);
             System.out.println("\t 장바구니에 추가되었습니다.");
             handleMainMenuInput();
         }else if (select == 2){
             handleMainMenuInput();
         }else {
             System.out.println("잘못 입력하셨습니다. 다시 입력해주세요.");
-            handleSelectItemInput(menuItem);
+            handleSelectItemInput(selectedItem);
         }
     }
 
