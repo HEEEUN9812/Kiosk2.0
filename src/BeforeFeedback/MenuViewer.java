@@ -114,16 +114,21 @@ public class MenuViewer {
     }
 
     public void displayOrderMenu(){
-        System.out.println();
-        System.out.println();
-        System.out.println("아래와 같이 주문 하시겠습니까? \n");
-        System.out.println("[ Orders ]");
-        order.getSavedList();
-        System.out.println();
-        System.out.println("[ Total ]");
-        order.getTotalPrice();
-        System.out.println("1. 주문 \t \t 2. 메뉴판");
-        handledOrderMenuInput();
+        if(order.savedList.size()!=0) {
+            System.out.println();
+            System.out.println();
+            System.out.println("아래와 같이 주문 하시겠습니까? \n");
+            System.out.println("[ Orders ]");
+            order.getSavedList();
+            System.out.println();
+            System.out.println("[ Total ]");
+            order.getTotalPrice();
+            System.out.println("1. 주문 \t \t 2. 메뉴판");
+            handledOrderMenuInput();
+        }else {
+            System.out.println("장바구니가 비어있습니다.");
+            handleMainMenuInput();
+        }
     }
 
     public void handledOrderMenuInput(){
